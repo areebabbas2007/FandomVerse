@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Characters | FandomVerse</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="asset/css/STYLE.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR-->
+
+<nav class="navbar navbar-expand-lg main-navbar sticky-top">
+
+    <div class="container-fluid px-lg-5">
+
+        <!-- LOGO -->
+
+        <a class="navbar-brand" href="index.html">
+
+            <div class="brand-logo">
+
+                <img
+                    src="asset/img/logo2.png"
+                    alt="FandomVerse Logo"
+                >
+
+            </div>
+
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNav"
+        >
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Anime.html">
+                        Anime
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Gaming.html">
+                        Gaming
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Movie.html">
+                        Movies
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Tvshow.html">
+                        TV Shows
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Manga.html">
+                        Manga
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Comic.html">
+                        Comics
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Character.html">
+                        Characters
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Contactus.html">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions" id="navActions">
+
+                <div
+                    id="authNavContainer"
+                    class="auth-nav-container"
+                >
+
+                    <a
+                        href="loginpage.html"
+                        class="login-btn"
+                        id="loginNavBtn"
+                    >
+                        Login
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+
+<!-- =========================
+     PAGE
+========================= -->
+
+<div class="characters-page">
+
+
+    <!-- PAGE HEADER -->
+
+    <div class="page-header">
+
+        <div>
+
+            <small>
+                FANDOMVERSE
+            </small>
+
+            <h1>
+                Characters
+            </h1>
+
+            <p>
+                Explore characters from your favorite anime,
+                manga, games and more.
+            </p>
+
+        </div>
+
+
+        <div class="character-icon">
+
+            <i class="fa-solid fa-users"></i>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SEARCH -->
+
+    <div class="search-area">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search characters..."
+            >
+
+        </div>
+
+
+        <select id="categoryFilter">
+
+            <option value="all">
+                All Characters
+            </option>
+
+            <option value="anime">
+                Anime
+            </option>
+
+            <option value="manga">
+                Manga
+            </option>
+
+            <option value="gaming">
+                Gaming
+            </option>
+
+            <option value="movies">
+                Movies
+            </option>
+
+        </select>
+
+    </div>
+
+
+
+    <!-- CHARACTER GRID -->
+
+    <div class="characters-grid" id="characterGrid">
+
+
+        <!-- 01 -->
+
+        <div class="character-card"
+             data-name="Killua Zoldyck"
+             data-category="anime">
+
+            <a href="Killua Zoldyck.html">
+                <div class="card-image">
+
+                <img src="asset/img/chr1.jpg" alt="Killua Zoldyck">
+
+                <span class="number">
+                    01
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Killua Zoldyck
+                </h3>
+
+                <p>
+                    Hunter × Hunter
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 02 -->
+
+        <div class="character-card"
+             data-name="Levi Ackerman"
+             data-category="anime">
+
+            <a href="Levi Ackerman.html"><div class="card-image">
+
+                <img src="asset/img/chr2.jpg" alt="">
+                <span class="number">
+                    02
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Levi Ackerman
+                </h3>
+
+                <p>
+                    Attack on Titan
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 03 -->
+
+        <div class="character-card"
+             data-name="Light Yagami"
+             data-category="anime">
+<a href="Light Yagami.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr3.jpg" alt="Light">
+
+                <span class="number">
+                    03
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Light Yagami
+                </h3>
+
+                <p>
+                    Death Note
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 04 -->
+
+        <div class="character-card"
+             data-name="Monkey D Luffy"
+             data-category="anime">
+<a href="Monkey D Luffy.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr4.jpg" alt="Luffy">
+
+                <span class="number">
+                    04
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Monkey D. Luffy
+                </h3>
+
+                <p>
+                    One Piece
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 05 -->
+
+        <div class="character-card"
+             data-name="Sukuna"
+             data-category="anime">
+<a href="Sukuna.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr5.jpg" alt="Sukuna">
+
+                <span class="number">
+                    05
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Sukuna
+                </h3>
+
+                <p>
+                    Jujutsu Kaisen
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 06 -->
+
+        <div class="character-card"
+             data-name="Tanjiro Kamado"
+             data-category="anime">
+<a href="TanjiroKamado.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr6.jpg" alt="Tanjiro">
+
+                <span class="number">
+                    06
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Tanjiro Kamado
+                </h3>
+
+                <p>
+                    Demon Slayer
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 07 -->
+
+        <div class="character-card"
+             data-name="Vegeta"
+             data-category="anime">
+<a href="Vegeta.html">
+    
+            <div class="card-image">
+
+                <img src="asset/img/chr7.jpg" alt="Vegeta">
+
+                <span class="number">
+                    07
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Vegeta
+                </h3>
+
+                <p>
+                    Dragon Ball
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 08 -->
+
+        <div class="character-card"
+             data-name="All Might"
+             data-category="anime">
+<a href="All Might.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr8.jpg" alt="All Might">
+
+                <span class="number">
+                    08
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    All Might
+                </h3>
+
+                <p>
+                    My Hero Academia
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 09 -->
+
+        <div class="character-card"
+             data-name="Katsuki Bakugo"
+             data-category="anime">
+<a href="Katsuki Bakugo.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr9.jpg" alt="Bakugo">
+
+                <span class="number">
+                    09
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Katsuki Bakugo
+                </h3>
+
+                <p>
+                    My Hero Academia
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 10 -->
+
+        <div class="character-card"
+             data-name="Eren Yeager"
+             data-category="anime">
+<a href="Eren Yeager.html">
+      <div class="card-image">
+
+                <img src="asset/img/chr10.jpg" alt="Eren">
+
+                <span class="number">
+                    10
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Eren Yeager
+                </h3>
+
+                <p>
+                    Attack on Titan
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 11 -->
+
+        <div class="character-card"
+             data-name="Ichigo Kurosaki"
+             data-category="anime">
+<a href="Ichigo Kurosaki.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr11.jpg" alt="Ichigo">
+
+                <span class="number">
+                    11
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Ichigo Kurosaki
+                </h3>
+
+                <p>
+                    Bleach
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 12 -->
+
+        <div class="character-card"
+             data-name="Itachi Uchiha"
+             data-category="anime">
+<a href="Itachi Uchiha.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr12.jpg" alt="Itachi">
+
+                <span class="number">
+                    12
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Itachi Uchiha
+                </h3>
+
+                <p>
+                    Naruto
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 13 -->
+
+        <div class="character-card"
+             data-name="L Lawliet"
+             data-category="anime">
+<a href="L Lawliet.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr13.jpg" alt="L">
+
+                <span class="number">
+                    13
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    L Lawliet
+                </h3>
+
+                <p>
+                    Death Note
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 14 -->
+
+        <div class="character-card"
+             data-name="Makima"
+             data-category="manga">
+<a href="Makima.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr14.jpg" alt="Makima">
+
+                <span class="number">
+                    14
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Makima
+                </h3>
+
+                <p>
+                    Chainsaw Man
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 15 -->
+
+        <div class="character-card"
+             data-name="Scarlet"
+             data-category="gaming">
+<a href="Scarlet.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr15.jpg" alt="Scarlet">
+
+                <span class="number">
+                    15
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Scarlet
+                </h3>
+
+                <p>
+                    Gaming
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 16 -->
+
+        <div class="character-card"
+             data-name="Yuji Itadori"
+             data-category="anime">
+<a href="Yuji Itadori.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr16.jpg" alt="Yuji">
+
+                <span class="number">
+                    16
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Yuji Itadori
+                </h3>
+
+                <p>
+                    Jujutsu Kaisen
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 17 -->
+
+        <div class="character-card"
+             data-name="Guts"
+             data-category="manga">
+<a href="Guts.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr17.jpg" alt="Guts">
+
+                <span class="number">
+                    17
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Guts
+                </h3>
+
+                <p>
+                    Berserk
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 18 -->
+
+        <div class="character-card"
+             data-name="Denji"
+             data-category="manga">
+<a href="Denji.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr18.jpg" alt="Denji">
+
+                <span class="number">
+                    18
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Denji
+                </h3>
+
+                <p>
+                    Chainsaw Man
+                </p>
+
+            </div></a>
+
+        </div>
+        
+
+
+
+        <!-- 19 -->
+
+        <div class="character-card"
+             data-name="Gon Freecss"
+             data-category="anime">
+<a href="Gon Freecss.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr19.jpg" alt="Gon">
+
+                <span class="number">
+                    19
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Gon Freecss
+                </h3>
+
+                <p>
+                    Hunter × Hunter
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 20 -->
+
+        <div class="character-card"
+             data-name="Naruto Uzumaki"
+             data-category="anime">
+<a href="Naruto Uzumak.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr20.jpg" alt="Naruto">
+
+                <span class="number">
+                    20
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Naruto Uzumaki
+                </h3>
+
+                <p>
+                    Naruto
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 21 -->
+
+        <div class="character-card"
+             data-name="Shoto Todoroki"
+             data-category="anime">
+<a href="Shoto Todoroki.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr21.jpg" alt="Shoto">
+
+                <span class="number">
+                    21
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Shoto Todoroki
+                </h3>
+
+                <p>
+                    My Hero Academia
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 22 -->
+
+        <div class="character-card"
+             data-name="Alucard"
+             data-category="anime">
+<a href="Alucard.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr22.jpg" alt="Alucard">
+
+                <span class="number">
+                    22
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Alucard
+                </h3>
+
+                <p>
+                    Hellsing
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 23 -->
+
+        <div class="character-card"
+             data-name="Sung Jin Woo"
+             data-category="manga">
+<a href="Sung Jin Woo.html">
+            <div class="card-image">
+
+                <img src="asset/img/chr23.jpg" alt="Jin Woo">
+
+                <span class="number">
+                    23
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Sung Jin-Woo
+                </h3>
+
+                <p>
+                    Solo Leveling
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+        <!-- 24 -->
+
+        <div class="character-card"
+             data-name="Kirito"
+             data-category="anime">
+<a href="Kirito.html"></a>
+            <div class="card-image">
+
+                <img src="asset/img/chr24.png" alt="Kirito">
+
+                <span class="number">
+                    24
+                </span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    Kirito
+                </h3>
+
+                <p>
+                    Sword Art Online
+                </p>
+
+            </div></a>
+
+        </div>
+
+
+
+    
+
+
+    </div>
+
+
+
+    <!-- NO RESULT -->
+
+    <div id="noResult">
+
+        <i class="fa-solid fa-face-frown"></i>
+
+        <h3>
+            No Character Found
+        </h3>
+
+    </div>
+
+
+</div>
+
+
+
+<!--FOOTER-->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-4">
+
+                <div class="footer-brand">
+ <a class="navbar-brand" href="index.html">
+
+            <div class="brand-logo">
+
+                <img
+                    src="asset/img/logo2.png"
+                    alt="FandomVerse Logo"
+                >
+
+            </div>
+
+        </a>
+
+                    
+
+                </div>
+
+                <p class="footer-description">
+                    Discover anime, gaming, movies, TV shows,
+                    manga, comics and everything your fandom
+                    heart loves.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <ul>
+
+                    <li><a href="Anime.html">Anime</a></li>
+                    <li><a href="Gaming.html">Gaming</a></li>
+                    <li><a href="Movie.html">Movies</a></li>
+                    <li><a href="Tvshow.html">TV Shows</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h4>
+                    Discover
+                </h4>
+
+                <ul>
+
+                    <li><a href="Manga.html">Manga</a></li>
+                    <li><a href="Comic.html">Comics</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Events</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h4>
+                    Community
+                </h4>
+
+                <ul>
+
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Members</a></li>
+                    <li><a href="#">Bookmarks</a></li>
+                    <li><a href="#">Characters</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h4>
+                    Company
+                </h4>
+
+                <ul>
+
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="Contactus.html">Contact</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 FandomVerse. All Rights Reserved.
+            </span>
+
+            <span>
+                Made for fandom lovers worldwide.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+
+<script>
+
+const searchInput =
+    document.getElementById("searchInput");
+
+const categoryFilter =
+    document.getElementById("categoryFilter");
+
+const cards =
+    document.querySelectorAll(".character-card");
+
+const noResult =
+    document.getElementById("noResult");
+
+
+function filterCharacters() {
+
+    const search =
+        searchInput.value.toLowerCase();
+
+    const category =
+        categoryFilter.value;
+
+    let found = 0;
+
+
+    cards.forEach(card => {
+
+        const name =
+            card.dataset.name.toLowerCase();
+
+        const cardCategory =
+            card.dataset.category;
+
+
+        const matchesSearch =
+            name.includes(search);
+
+        const matchesCategory =
+            category === "all" ||
+            cardCategory === category;
+
+
+        if (matchesSearch && matchesCategory) {
+
+            card.style.display = "block";
+
+            found++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    if (found === 0) {
+
+        noResult.style.display = "block";
+
+    } else {
+
+        noResult.style.display = "none";
+
+    }
+
+}
+
+
+searchInput.addEventListener(
+    "input",
+    filterCharacters
+);
+
+categoryFilter.addEventListener(
+    "change",
+    filterCharacters
+);
+
+</script>
+
+
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>

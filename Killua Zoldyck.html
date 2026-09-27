@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Killua Zoldyck | FandomVerse</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #08091a;
+            color: #ffffff;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .main-navbar {
+            background: rgba(8, 9, 26, 0.97);
+            border-bottom: 1px solid #29234b;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-logo {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent !important;
+        }
+
+        .brand-logo img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            background: transparent !important;
+        }
+
+        .nav-link {
+            color: #b9b6d0 !important;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 9px 13px !important;
+            border-radius: 8px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: white !important;
+            background: #201a3b;
+        }
+
+        .navbar-nav {
+            gap: 4px;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-icon {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #39305d;
+            border-radius: 10px;
+            background: #121127;
+            color: #c084fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .nav-icon:hover {
+            background: #7c3aed;
+            color: white;
+        }
+
+        .login-btn {
+            background: linear-gradient(
+                135deg,
+                #7c3aed,
+                #9333ea
+            );
+            color: white;
+            padding: 9px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .login-btn:hover {
+            color: white;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+        }
+
+        .navbar-toggler {
+            color: white;
+            border: 1px solid #493b70;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .character-hero {
+            position: relative;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 75% 50%,
+                    rgba(124, 58, 237, 0.25),
+                    transparent 35%
+                ),
+                #08091a;
+        }
+
+        .character-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #08091a 10%,
+                    rgba(8, 9, 26, 0.85) 45%,
+                    rgba(8, 9, 26, 0.25) 100%
+                );
+
+            z-index: 1;
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 5%;
+            bottom: 0;
+            height: 500px;
+            width: 50%;
+            object-fit: contain;
+            object-position: right bottom;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 80px 0;
+            max-width: 650px;
+        }
+
+        .hero-small {
+            color: #a855f7;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            line-height: 1.1;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .hero-content h1 span {
+            color: #a855f7;
+        }
+
+        .hero-subtitle {
+            color: #aaa7c1;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn {
+            background: linear-gradient(
+                135deg,
+                #7c3aed,
+                #9333ea
+            );
+            border: none;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 9px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .primary-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, .3);
+        }
+
+        .secondary-btn {
+            border: 1px solid #493b70;
+            color: #d8d4e9;
+            background: #121127;
+            padding: 12px 22px;
+            border-radius: 9px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .secondary-btn:hover {
+            color: white;
+            background: #201a3b;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .details-section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            margin-bottom: 35px;
+        }
+
+        .section-title span {
+            color: #a855f7;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            margin-top: 7px;
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           INFO CARD
+        ========================= */
+
+        .info-card {
+            background: #101126;
+            border: 1px solid #29234b;
+            border-radius: 18px;
+            padding: 30px;
+            height: 100%;
+        }
+
+        .info-card h3 {
+            font-size: 23px;
+            margin-bottom: 18px;
+        }
+
+        .info-card p {
+            color: #aaa7c1;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CHARACTER INFORMATION
+        ========================= */
+
+        .character-info {
+            background: #101126;
+            border: 1px solid #29234b;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 16px 22px;
+            border-bottom: 1px solid #29234b;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: #8d8ba7;
+            font-size: 13px;
+        }
+
+        .info-value {
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .purple {
+            color: #c084fc;
+        }
+
+
+        /* =========================
+           ABILITIES
+        ========================= */
+
+        .ability-card {
+            background: #101126;
+            border: 1px solid #29234b;
+            border-radius: 16px;
+            padding: 25px;
+            height: 100%;
+            transition: .3s;
+        }
+
+        .ability-card:hover {
+            transform: translateY(-6px);
+            border-color: #7c3aed;
+            box-shadow: 0 15px 35px rgba(0,0,0,.25);
+        }
+
+        .ability-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #201a3b;
+            color: #c084fc;
+            border-radius: 12px;
+            font-size: 20px;
+            margin-bottom: 18px;
+        }
+
+        .ability-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .ability-card p {
+            color: #aaa7c1;
+            font-size: 13px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+
+        /* =========================
+           QUOTE
+        ========================= */
+
+        .quote-box {
+            margin-top: 60px;
+            padding: 45px;
+            border-radius: 20px;
+            text-align: center;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(124,58,237,.18),
+                    rgba(147,51,234,.05)
+                );
+            border: 1px solid #392d61;
+        }
+
+        .quote-box i {
+            color: #a855f7;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .quote-box p {
+            color: #ddd9ed;
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #060713;
+            border-top: 1px solid #29234b;
+            padding: 45px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo span {
+            color: #a855f7;
+        }
+
+        footer p {
+            color: #8d8ba7;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        footer h3 {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            display: block;
+            color: #8d8ba7;
+            text-decoration: none;
+            font-size: 13px;
+            margin-bottom: 9px;
+        }
+
+        footer a:hover {
+            color: #c084fc;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #29234b;
+            margin-top: 30px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #66637d;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .hero-image {
+                opacity: .35;
+                width: 70%;
+            }
+
+            .hero-content h1 {
+                font-size: 48px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .character-hero {
+                min-height: 600px;
+            }
+
+            .hero-image {
+                width: 100%;
+                height: 400px;
+                opacity: .25;
+            }
+
+            .hero-content {
+                padding: 60px 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg main-navbar sticky-top">
+
+    <div class="container-fluid px-lg-5">
+
+        <a class="navbar-brand" href="index.html">
+
+            <div class="brand-logo">
+                <img src="asset/img/logo2.png" alt="FandomVerse">
+            </div>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Anime.html">
+                        Anime
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Gaming.html">
+                        Gaming
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Movie.html">
+                        Movies
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Tvshow.html">
+                        TV Shows
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Manga.html">
+                        Manga
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Comic.html">
+                        Comics
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="Character.html">
+                        Characters
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Contactus.html">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-actions">
+
+                <a href="search.html" class="nav-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <a href="loginpage.html" class="login-btn">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     CHARACTER HERO
+========================= -->
+
+<section class="character-hero">
+
+    <!-- Change this image if your Killua image has a different filename -->
+
+    <img
+        src="asset/img/chr1.jpg"
+        alt="Killua Zoldyck"
+        class="hero-image"
+    >
+
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-small">
+                HUNTER × HUNTER
+            </div>
+
+            <h1>
+                Killua <span>Zoldyck</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                The lightning-fast assassin with an
+                unpredictable heart.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#details" class="primary-btn">
+                    <i class="fa-solid fa-user"></i>
+                    Character Details
+                </a>
+
+                <a href="Character.html" class="secondary-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    All Characters
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     DETAILS
+========================= -->
+
+<section class="details-section" id="details">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                CHARACTER PROFILE
+            </span>
+
+            <h2>
+                About Killua
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- DESCRIPTION -->
+
+            <div class="col-lg-7">
+
+                <div class="info-card">
+
+                    <h3>
+                        Killua Zoldyck
+                    </h3>
+
+                    <p>
+                        Killua Zoldyck is one of the central
+                        characters of Hunter × Hunter. He comes
+                        from the famous Zoldyck family and was
+                        trained from a young age as an assassin.
+                    </p>
+
+                    <p>
+                        Despite his background, Killua develops
+                        a strong friendship with Gon Freecss.
+                        Their journey together allows Killua to
+                        discover a life beyond the expectations
+                        placed on him by his family.
+                    </p>
+
+                    <p>
+                        Killua is known for his intelligence,
+                        incredible speed, combat skills and
+                        distinctive lightning-based abilities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMATION -->
+
+            <div class="col-lg-5">
+
+                <div class="character-info">
+
+                    <div class="info-row">
+
+                        <span class="info-label">
+                            Full Name
+                        </span>
+
+                        <span class="info-value">
+                            Killua Zoldyck
+                        </span>
+
+                    </div>
+
+                    <div class="info-row">
+
+                        <span class="info-label">
+                            Series
+                        </span>
+
+                        <span class="info-value purple">
+                            Hunter × Hunter
+                        </span>
+
+                    </div>
+
+                    <div class="info-row">
+
+                        <span class="info-label">
+                            Character Type
+                        </span>
+
+                        <span class="info-value">
+                            Hunter
+                        </span>
+
+                    </div>
+
+                    <div class="info-row">
+
+                        <span class="info-label">
+                            Family
+                        </span>
+
+                        <span class="info-value">
+                            Zoldyck Family
+                        </span>
+
+                    </div>
+
+                    <div class="info-row">
+
+                        <span class="info-label">
+                            Nen Type
+                        </span>
+
+                        <span class="info-value">
+                            Transmutation
+                        </span>
+
+                    </div>
+
+                    <div class="info-row">
+
+                        <span class="info-label">
+                            Affiliation
+                        </span>
+
+                        <span class="info-value">
+                            Gon & Friends
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             ABILITIES
+        ========================= -->
+
+        <div class="section-title mt-5">
+
+            <span>
+                SKILLS & ABILITIES
+            </span>
+
+            <h2>
+                What Makes Killua Special?
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="ability-card">
+
+                    <div class="ability-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h3>
+                        Lightning
+                    </h3>
+
+                    <p>
+                        Killua can transform his aura into
+                        electricity and use it during combat.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="ability-card">
+
+                    <div class="ability-icon">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+
+                    <h3>
+                        Speed
+                    </h3>
+
+                    <p>
+                        His assassin training gives him
+                        remarkable speed and reflexes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="ability-card">
+
+                    <div class="ability-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <h3>
+                        Intelligence
+                    </h3>
+
+                    <p>
+                        Killua is highly observant and can
+                        quickly analyze dangerous situations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="ability-card">
+
+                    <div class="ability-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <h3>
+                        Assassin Training
+                    </h3>
+
+                    <p>
+                        Years of training have made Killua
+                        highly capable in hand-to-hand combat.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             QUOTE
+        ========================= -->
+
+        <div class="quote-box">
+
+            <i class="fa-solid fa-quote-left"></i>
+
+            <p>
+                Killua's journey is about discovering
+                friendship, freedom and his own identity.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="footer-logo">
+                    Fandom<span>Verse</span>
+                </div>
+
+                <p>
+                    Explore, discover and connect with fandoms
+                    across anime, gaming, movies, TV, comics
+                    and manga.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="Anime.html">
+                    Anime
+                </a>
+
+                <a href="Gaming.html">
+                    Gaming
+                </a>
+
+                <a href="Movie.html">
+                    Movies
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Community
+                </h3>
+
+                <a href="Character.html">
+                    Characters
+                </a>
+
+                <a href="chat.html">
+                    Chat
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Company
+                </h3>
+
+                <a href="AboutUs.html">
+                    About Us
+                </a>
+
+                <a href="Contactus.html">
+                    Contact Us
+                </a>
+
+                <a href="loginpage.html">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 FandomVerse. All rights reserved.
+            </span>
+
+            <span>
+                Made for fandom lovers.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FandomVerse</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="asset/css/STYLE.css">
+
+    <!-- Additional styles for the user badge + logout -->
+    <style>
+       
+    </style>
+</head>
+
+<body>
+
+<!--BACKGROUND EFFECT-->
+
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+
+
+
+<!-- NAVBAR-->
+
+<nav class="navbar navbar-expand-lg main-navbar sticky-top">
+
+    <div class="container-fluid px-lg-5">
+
+        <!-- LOGO -->
+
+        <a class="navbar-brand" href="index.html">
+
+            <div class="brand-logo">
+
+                <img
+                    src="asset/img/logo2.png"
+                    alt="FandomVerse Logo"
+                >
+
+            </div>
+
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNav"
+        >
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Anime.html">
+                        Anime
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Gaming.html">
+                        Gaming
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Movie.html">
+                        Movies
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Tvshow.html">
+                        TV Shows
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Manga.html">
+                        Manga
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Comic.html">
+                        Comics
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Character.html">
+                        Characters
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Contactus.html">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions" id="navActions">
+
+                <div
+                    id="authNavContainer"
+                    class="auth-nav-container"
+                >
+
+                    <a
+                        href="loginpage.html"
+                        class="login-btn"
+                        id="loginNavBtn"
+                    >
+                        Login
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- HERO SECTION-->
+
+<section class="hero-section">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-fire"></i>
+                The Ultimate Fandom Hub
+            </div>
+
+            <h1>
+                Explore.
+                <span>Discover.</span>
+                Be Part of the Fandom.
+            </h1>
+
+            <p>
+                Anime, gaming, movies, TV shows, comics, manga and more.
+                Discover everything you love in one powerful fandom universe.
+            </p>
+
+
+            <div class="hero-search">
+
+                <input
+                    type="text"
+                    id="heroSearch"
+                    placeholder="Search for your favorite content..."
+                >
+
+                <button onclick="searchContent()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </div>
+
+
+            <div class="hero-buttons">
+
+                <a href="#hubs" class="btn-primary-custom">
+                    Explore Fandom Hubs
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#featured" class="btn-outline-custom">
+                    View Featured
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FANDOM HUBS-->
+
+<section class="section-space" id="hubs">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">EXPLORE</span>
+
+                <h2>
+                    Our Fandom Hubs
+                </h2>
+            </div>
+
+            <a href="view.html" class="view-all">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="row g-3">
+
+            <div class="col-6 col-md-4 col-lg">
+
+                <a href="Anime.html" class="hub-card">
+
+                    <div class="hub-icon anime-icon">
+                        <i class="fa-solid fa-user-ninja"></i>
+                    </div>
+
+                    <h5>Anime</h5>
+                    <p>Explore anime</p>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg">
+
+                <a href="Gaming.html" class="hub-card">
+
+                    <div class="hub-icon gaming-icon">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+
+                    <h5>Gaming</h5>
+                    <p>Level up</p>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg">
+
+                <a href="Movie.html" class="hub-card">
+
+                    <div class="hub-icon movie-icon">
+                        <i class="fa-solid fa-film"></i>
+                    </div>
+
+                    <h5>Movies</h5>
+                    <p>Watch & discover</p>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg">
+
+                <a href="Tvshow.html" class="hub-card">
+
+                    <div class="hub-icon tv-icon">
+                        <i class="fa-solid fa-tv"></i>
+                    </div>
+
+                    <h5>TV Shows</h5>
+                    <p>Trending shows</p>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg">
+
+                <a href="Manga.html" class="hub-card">
+
+                    <div class="hub-icon manga-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <h5>Manga</h5>
+                    <p>Read & explore</p>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg">
+
+                <a href="Comic.html" class="hub-card">
+
+                    <div class="hub-icon comic-icon">
+                        <i class="fa-solid fa-mask-face"></i>
+                    </div>
+
+                    <h5>Comics</h5>
+                    <p>Hero stories</p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--  FEATURED ARTICLES-->
+
+<section class="section-space" id="featured">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    FEATURED
+                </span>
+
+                <h2>
+                    Featured Articles
+                </h2>
+
+            </div>
+
+            
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+
+                <article class="article-card">
+
+                    <div class="article-image">
+
+                        <img
+                            src="asset/img/2.png"
+                            alt="Anime"
+                        >
+
+                        <span class="category-badge">
+                            Anime
+                        </span>
+
+                    </div>
+
+                    <div class="article-body">
+
+                        <h3>
+                            The Rise of Anime in Global Culture
+                        </h3>
+
+                        <p>
+                            Discover how anime continues to influence
+                            entertainment and pop culture worldwide.
+                        </p>
+
+                        <div class="article-meta">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                5 min read
+                            </span>
+
+                            <span>
+                                <i class="fa-regular fa-eye"></i>
+                                2.4K
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <article class="article-card">
+
+                    <div class="article-image">
+
+                        <img
+                            src="asset/img/3.png"
+                            alt="Gaming" >
+
+                        <span class="category-badge gaming">
+                            Gaming
+                        </span>
+
+                    </div>
+
+                    <div class="article-body">
+
+                        <h3>
+                            Top Games You Should Buy And Play
+                        </h3>
+
+                        <p>
+                            From competitive adventures to immersive
+                            worlds, discover what's trending.
+                        </p>
+
+                        <div class="article-meta">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                7 min read
+                            </span>
+
+                            <span>
+                                <i class="fa-regular fa-eye"></i>
+                                3.1K
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <article class="article-card">
+
+                    <div class="article-image">
+
+                        <img
+                            src="asset/img/4.png"
+                            alt="Movies"
+                        >
+
+                        <span class="category-badge movie">
+                            Movies
+                        </span>
+
+                    </div>
+
+                    <div class="article-body">
+
+                        <h3>
+                            Best Movies to Watch This Week
+                        </h3>
+
+                        <p>
+                            Explore popular movies and hidden gems
+                            recommended by the community.
+                        </p>
+
+                        <div class="article-meta">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                6 min read
+                            </span>
+
+                            <span>
+                                <i class="fa-regular fa-eye"></i>
+                                1.8K
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <article class="article-card">
+
+                    <div class="article-image">
+
+                        <img
+                            src="asset/img/5.png"
+                            alt="Manga"
+                        >
+
+                        <span class="category-badge manga">
+                            Manga
+                        </span>
+
+                    </div>
+
+                    <div class="article-body">
+
+                        <h3>
+                            New Manga Releases You Should Watch
+                        </h3>
+
+                        <p>
+                            Check out the latest chapters and exciting
+                            manga releases.Go Download And Just Watch
+                        </p>
+
+                        <div class="article-meta">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                4 min read
+                            </span>
+
+                            <span>
+                                <i class="fa-regular fa-eye"></i>
+                                1.5K
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--THREE FEATURE PANELS -->
+
+<section class="three-panels-section">
+
+    <div class="row g-3">
+
+       
+
+        <div class="col-lg-4">
+
+            <div class="fandom-panel">
+
+                <div class="panel-title-row">
+
+                    <h2>Latest Trailers</h2>
+
+                </div>
+
+
+                <div class="trailer-list">
+
+                    
+                    <a href="#" class="trailer-item">
+
+                        <div class="trailer-image">
+
+                            <img
+                                src="asset/img/63.jpg"
+                                alt="Stranger Things"
+                            >
+
+                           
+
+                        </div>
+
+
+                        <div class="trailer-content">
+
+                            <h3>
+                                Stranger Things Season 5
+                            </h3>
+
+                            <span class="content-tag">
+                                Trailer
+                            </span>
+
+                            <p>
+                                <i class="fa-regular fa-calendar"></i>
+                                Apr 15, 2025
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="#" class="trailer-item">
+
+                        <div class="trailer-image">
+
+                            <img
+                                src="asset/img/64.jpg"
+                                alt="Fantastic Four"
+                            >
+
+                           
+
+                        </div>
+
+
+                        <div class="trailer-content">
+
+                            <h3>
+                                Fantastic Four: First Steps
+                            </h3>
+
+                            <span class="content-tag">
+                                Trailer
+                            </span>
+
+                            <p>
+                                <i class="fa-regular fa-calendar"></i>
+                                Apr 14, 2025
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="#" class="trailer-item">
+
+                        <div class="trailer-image">
+
+                            <img
+                                src="asset/img/65.jpg"
+                                alt="Solo Leveling"
+                            >
+
+                           
+
+                        </div>
+
+
+                        <div class="trailer-content">
+
+                            <h3>
+                                Solo Leveling Season 2
+                            </h3>
+
+                            <span class="content-tag">
+                                Trailer
+                            </span>
+
+                            <p>
+                                <i class="fa-regular fa-calendar"></i>
+                                Apr 12, 2025
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- UPCOMING EVENTS  -->
+
+        <div class="col-lg-4">
+
+            <div class="fandom-panel">
+
+                <div class="panel-title-row">
+
+                    <h2>Upcoming Events</h2>
+
+                </div>
+
+
+                <div class="trailer-list">
+
+
+                    <a href="#" class="trailer-item">
+
+                        <div class="trailer-image">
+
+                            <img
+                                src="asset/img/6.jpg"
+                                alt="Anime Expo"
+                            >
+
+                        </div>
+
+
+                        <div class="trailer-content">
+
+                            <h3>
+                                Anime Expo 2025
+                            </h3>
+
+                            <span class="event-tag purple">
+                                Event
+                            </span>
+
+                            <p>
+                                <i class="fa-regular fa-calendar"></i>
+                                Jul 3 · Los Angeles
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="#" class="trailer-item">
+
+                        <div class="trailer-image">
+
+                            <img
+                                src="asset/img/7.png"
+                                alt="Gaming Convention"
+                            >
+
+                        </div>
+
+
+                        <div class="trailer-content">
+
+                            <h3>
+                                Gaming Convention
+                            </h3>
+
+                            <span class="event-tag blue">
+                                Gaming
+                            </span>
+
+                            <p>
+                                <i class="fa-regular fa-calendar"></i>
+                                May 18 · Karachi
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="#" class="trailer-item">
+
+                        <div class="trailer-image">
+
+                            <img
+                                src="asset/img/8.jpg"
+                                alt="K-Pop Fan Meet"
+                            >
+
+                        </div>
+
+
+                        <div class="trailer-content">
+
+                            <h3>
+                                K-Pop Fan Meet
+                            </h3>
+
+                            <span class="event-tag pink">
+                                K-Pop
+                            </span>
+
+                            <p>
+                                <i class="fa-regular fa-calendar"></i>
+                                Jun 7 · Lahore
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- NEW RELEASES -->
+
+        <div class="col-lg-4">
+
+            <div class="fandom-panel">
+
+                <div class="panel-title-row">
+
+                    <h2>New Releases</h2>
+                </div>
+
+
+                <div class="trailer-list">
+
+
+                    <a href="#" class="trailer-item">
+
+                        <div class="trailer-image">
+
+                            <img
+                                src="asset/img/9.jpg"
+                                alt="Pop Culture Trends"
+                            >
+
+                        </div>
+
+
+                        <div class="trailer-content">
+
+                            <h3>
+                                Pop Culture Trends 2025
+                            </h3>
+
+                            <span class="release-tag">
+                                Article
+                            </span>
+
+                            <p>
+                                <i class="fa-solid fa-star"></i>
+                                New Release
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="#" class="trailer-item">
+
+                        <div class="trailer-image">
+
+                            <img
+                                src="asset/img/10.jpg"
+                                alt="Elden Ring"
+                            >
+
+                        </div>
+
+
+                        <div class="trailer-content">
+
+                            <h3>
+                                Elden Ring DLC
+                            </h3>
+
+                            <span class="release-tag">
+                                Game
+                            </span>
+
+                            <p>
+                                <i class="fa-solid fa-star"></i>
+                                New Release
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="#" class="trailer-item">
+
+                        <div class="trailer-image">
+
+                            <img
+                                src="asset/img/11.png"
+                                alt="Demon Slayer"
+                            >
+
+                        </div>
+
+
+                        <div class="trailer-content">
+
+                            <h3>
+                                Demon Slayer: New Arc
+                            </h3>
+
+                            <span class="release-tag">
+                                Anime
+                            </span>
+
+                            <p>
+                                <i class="fa-solid fa-star"></i>
+                                New Release
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--  MERCHANDISE-->
+
+<section class="section-space">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    SHOP
+                </span>
+
+                <h2>
+                    Merchandise Showcase
+                </h2>
+
+            </div>
+
+           
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="merch-card">
+
+                    <div class="merch-image">
+
+                        <img
+                            src="asset/img/56.jpg"
+                            alt=""
+                        >
+
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="merch-info">
+
+                        <h4>
+                            FandomVerse Hoodie
+                        </h4>
+
+                        <p>
+                            Premium Collection
+                        </p>
+
+                        <div class="price-row">
+
+                            <strong>
+                                $39.99
+                            </strong>
+
+                            <button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="merch-card">
+
+                    <div class="merch-image">
+
+                        <img
+                            src="asset/img/57.jpg"
+                            alt=""
+                        >
+
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="merch-info">
+
+                        <h4>
+                            Anime Collectible
+                        </h4>
+
+                        <p>
+                            Limited Edition
+                        </p>
+
+                        <div class="price-row">
+
+                            <strong>
+                                $24.99
+                            </strong>
+
+                            <button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="merch-card">
+
+                    <div class="merch-image">
+
+                        <img
+                            src="asset/img/58.jpg"
+                            alt=""
+                        >
+
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="merch-info">
+
+                        <h4>
+                            Character Figure
+                        </h4>
+
+                        <p>
+                            Collector Series
+                        </p>
+
+                        <div class="price-row">
+
+                            <strong>
+                                $29.99
+                            </strong>
+
+                            <button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="merch-card">
+
+                    <div class="merch-image">
+
+                        <img
+                            src="asset/img/59.jpg"
+                            alt=""
+                        >
+
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="merch-info">
+
+                        <h4>
+                            Fandom T-Shirt
+                        </h4>
+
+                        <p>
+                            Official Collection
+                        </p>
+
+                        <div class="price-row">
+
+                            <strong>
+                                $19.99
+                            </strong>
+
+                            <button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--  COMMUNITY-->
+
+<section class="community-section">
+
+    <div class="container">
+
+        <div class="community-box">
+
+            <div class="community-content">
+
+                <span class="section-label">
+                    JOIN THE COMMUNITY
+                </span>
+
+                <h2>
+                    Your Fandom.
+                    <span>Your Community.</span>
+                </h2>
+
+                <p>
+                    Connect with fans, discover new content,
+                    share your passion and stay updated with
+                    everything happening in the fandom world.
+                </p>
+
+                <div class="community-buttons">
+
+                    <a href="loginpage.html" class="btn-primary-custom">
+                        Join Community
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="view.html" class="btn-outline-custom">
+                        Explore More
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="community-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--NEWSLETTER-->
+
+<section class="newsletter-section">
+
+    <div class="container">
+
+        <div class="newsletter-box">
+
+            <div>
+
+                <span class="section-label">
+                    STAY UPDATED
+                </span>
+
+                <h2>
+                    Never Miss a Fandom Update
+                </h2>
+
+                <p>
+                    Get the latest news, articles and events
+                    delivered to your inbox.
+                </p>
+
+            </div>
+
+
+            <form class="newsletter-form">
+
+                <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--FOOTER-->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-4">
+
+                <div class="footer-brand">
+ <a class="navbar-brand" href="index.html">
+
+            <div class="brand-logo">
+
+                <img
+                    src="asset/img/logo2.png"
+                    alt="FandomVerse Logo"
+                >
+
+            </div>
+
+        </a>
+
+                    
+
+                </div>
+
+                <p class="footer-description">
+                    Discover anime, gaming, movies, TV shows,
+                    manga, comics and everything your fandom
+                    heart loves.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <ul>
+
+                    <li><a href="Anime.html">Anime</a></li>
+                    <li><a href="Gaming.html">Gaming</a></li>
+                    <li><a href="Movie.html">Movies</a></li>
+                    <li><a href="Tvshow.html">TV Shows</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h4>
+                    Discover
+                </h4>
+
+                <ul>
+
+                    <li><a href="Manga.html">Manga</a></li>
+                    <li><a href="Comic.html">Comics</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Events</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h4>
+                    Community
+                </h4>
+
+                <ul>
+
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Members</a></li>
+                    <li><a href="#">Bookmarks</a></li>
+                    <li><a href="#">Characters</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h4>
+                    Company
+                </h4>
+
+                <ul>
+
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="Contactus.html">Contact</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 FandomVerse. All Rights Reserved.
+            </span>
+
+            <span>
+                Made for fandom lovers worldwide.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!--  FLOATING CHAT -->
+
+<button class="chat-button">
+
+    <i class="fa-solid fa-comments"></a></i>
+
+    <span>
+       
+    </span>
+
+</button>
+
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script src="script.js"></script>
+
+<!-- Dynamic navbar auth script -->
+<script>
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ryomen Sukuna | FandomVerse</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #08091a;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.main-navbar {
+    background: rgba(8, 9, 26, 0.97);
+    border-bottom: 1px solid #29234b;
+    min-height: 75px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-logo {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-logo i {
+    font-size: 30px;
+    color: #a855f7;
+}
+
+.brand-text span {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+
+.brand-text span span {
+    color: #a855f7;
+}
+
+.brand-text small {
+    color: #8d8ba7;
+    font-size: 10px;
+}
+
+.navbar-nav {
+    gap: 4px;
+}
+
+.nav-link {
+    color: #b9b6d0 !important;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 12px !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white !important;
+    background: #201a3b;
+    border-radius: 8px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #39305d;
+    border-radius: 10px;
+    background: #121127;
+    color: #c084fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icon:hover {
+    background: #7c3aed;
+    color: white;
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    color: white;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-btn:hover {
+    color: white;
+    box-shadow: 0 0 20px rgba(168, 85, 247, .4);
+}
+
+.navbar-toggler {
+    color: white;
+    border: 1px solid #493b70;
+}
+
+.navbar-toggler i {
+    color: white;
+}
+
+
+/* =========================
+   CHARACTER HERO
+========================= */
+
+.character-page {
+    min-height: 100vh;
+}
+
+.character-hero {
+    position: relative;
+    min-height: 560px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            90deg,
+            #08091a 5%,
+            rgba(8,9,26,.92) 35%,
+            rgba(8,9,26,.55) 65%,
+            #08091a 100%
+        );
+}
+
+.hero-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 65%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .32;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            #08091a 5%,
+            rgba(8,9,26,.8) 35%,
+            transparent 75%
+        );
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 90px 0;
+}
+
+
+/* =========================
+   BREADCRUMB
+========================= */
+
+.breadcrumb-custom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #77738f;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.breadcrumb-custom a {
+    color: #a855f7;
+}
+
+.breadcrumb-custom i {
+    font-size: 9px;
+}
+
+
+/* =========================
+   CHARACTER INFO
+========================= */
+
+.character-label {
+    display: inline-block;
+    color: #c084fc;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.character-title {
+    font-size: 58px;
+    line-height: 1.05;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.character-title span {
+    color: #a855f7;
+}
+
+.character-subtitle {
+    font-size: 18px;
+    color: #aaa6bd;
+    margin-bottom: 25px;
+}
+
+.character-description {
+    max-width: 620px;
+    color: #9290a8;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.character-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.character-tag {
+    background: #17132d;
+    border: 1px solid #352b58;
+    color: #c9c3df;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn-purple {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    border: none;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 9px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn-purple:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(124,58,237,.3);
+}
+
+.btn-outline-purple {
+    background: transparent;
+    border: 1px solid #493b70;
+    color: #c084fc;
+    padding: 12px 22px;
+    border-radius: 9px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn-outline-purple:hover {
+    background: #201a3b;
+    color: white;
+}
+
+
+/* =========================
+   CHARACTER IMAGE
+========================= */
+
+.character-image-box {
+    position: absolute;
+    right: 7%;
+    bottom: 0;
+    z-index: 2;
+    width: 390px;
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.character-image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 35px rgba(0,0,0,.7));
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.character-content {
+    padding: 70px 0;
+    background: #08091a;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.section-title span {
+    color: #a855f7;
+}
+
+.section-subtitle {
+    color: #77738f;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   INFO CARD
+========================= */
+
+.info-card {
+    background: #111126;
+    border: 1px solid #28234a;
+    border-radius: 16px;
+    padding: 28px;
+    height: 100%;
+}
+
+.info-card:hover {
+    border-color: #6336a4;
+}
+
+.info-card h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.info-card h3 i {
+    color: #a855f7;
+    margin-right: 8px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 13px 0;
+    border-bottom: 1px solid #25213f;
+    font-size: 13px;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-row span:first-child {
+    color: #77738f;
+}
+
+.info-row span:last-child {
+    color: #ddd9ea;
+    font-weight: 500;
+}
+
+
+/* =========================
+   ABOUT CARD
+========================= */
+
+.about-card {
+    background: linear-gradient(
+        145deg,
+        #15132d,
+        #0f1022
+    );
+    border: 1px solid #29234b;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.about-card p {
+    color: #9290a8;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   ABILITIES
+========================= */
+
+.ability-card {
+    background: #111126;
+    border: 1px solid #29234b;
+    border-radius: 15px;
+    padding: 25px;
+    height: 100%;
+    transition: .3s;
+}
+
+.ability-card:hover {
+    transform: translateY(-5px);
+    border-color: #7c3aed;
+}
+
+.ability-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: #21173c;
+    color: #c084fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.ability-card h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.ability-card p {
+    color: #85829a;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats-section {
+    padding: 60px 0;
+}
+
+.stat-card {
+    background: #111126;
+    border: 1px solid #29234b;
+    border-radius: 15px;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.stat-number {
+    font-size: 30px;
+    font-weight: 800;
+    color: #a855f7;
+}
+
+.stat-name {
+    color: #85829a;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-section {
+    padding: 20px 0 70px;
+}
+
+.quote-box {
+    background:
+        linear-gradient(
+            135deg,
+            #17132f,
+            #0f1022
+        );
+    border: 1px solid #302653;
+    border-radius: 18px;
+    padding: 45px;
+    text-align: center;
+}
+
+.quote-icon {
+    color: #a855f7;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.quote-box p {
+    color: #d2cde1;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.quote-box small {
+    color: #77738f;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #060713;
+    border-top: 1px solid #29234b;
+    padding: 50px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: #a855f7;
+}
+
+.footer-grid p {
+    color: #77738f;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.footer-grid h4 {
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.footer-grid a {
+    display: block;
+    color: #77738f;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.footer-grid a:hover {
+    color: #c084fc;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #201d38;
+    display: flex;
+    justify-content: space-between;
+    color: #5f5c72;
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1199px) {
+
+    .character-image-box {
+        right: 2%;
+        width: 340px;
+    }
+
+    .character-title {
+        font-size: 48px;
+    }
+
+}
+
+@media(max-width:991px) {
+
+    .character-hero {
+        min-height: auto;
+    }
+
+    .hero-bg {
+        width: 100%;
+        opacity: .18;
+    }
+
+    .character-image-box {
+        position: relative;
+        right: auto;
+        width: 300px;
+        height: 380px;
+        margin: 20px auto 0;
+    }
+
+    .hero-content {
+        padding: 55px 0 20px;
+    }
+
+    .character-title {
+        font-size: 42px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .character-title {
+        font-size: 34px;
+    }
+
+    .character-subtitle {
+        font-size: 15px;
+    }
+
+    .character-description {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+
+    .character-image-box {
+        width: 250px;
+        height: 320px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .quote-box {
+        padding: 30px 20px;
+    }
+
+    .quote-box p {
+        font-size: 16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg main-navbar sticky-top">
+
+    <div class="container-fluid px-lg-5">
+
+        <a class="navbar-brand" href="index.html">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-circle-nodes"></i>
+            </div>
+
+            <div class="brand-text">
+
+                <span>
+                    Fandom<span>Verse</span>
+                </span>
+
+                <small>
+                    Portal for Fandom World
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="Anime.html">Anime</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Gaming.html">Gaming</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Movie.html">Movies</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Tvshow.html">TV Shows</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Manga.html">Manga</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Comic.html">Comics</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Character.html">Characters</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Contactus.html">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-actions">
+
+                <a href="search.html" class="nav-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <a href="loginpage.html" class="login-btn">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     CHARACTER HERO
+========================= -->
+
+<main class="character-page">
+
+<section class="character-hero">
+
+    <!-- Change this image path if your Sukuna image has another name -->
+    <img
+        src="asset/img/chr5.jpg"
+        class="hero-bg"
+        alt="Ryomen Sukuna"
+    >
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="container hero-content">
+
+        <div class="row">
+
+            <div class="col-lg-7">
+
+                <div class="breadcrumb-custom">
+
+                    <a href="index.html">Home</a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <a href="Character.html">Characters</a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <span>Ryomen Sukuna</span>
+
+                </div>
+
+
+                <span class="character-label">
+                    JUJUTSU KAISEN
+                </span>
+
+
+                <h1 class="character-title">
+                    Ryomen <span>Sukuna</span>
+                </h1>
+
+
+                <p class="character-subtitle">
+                    King of Curses
+                </p>
+
+
+                <p class="character-description">
+
+                    Ryomen Sukuna is one of the most powerful
+                    cursed spirits in Jujutsu Kaisen. Known as
+                    the King of Curses, Sukuna possesses immense
+                    cursed energy, extraordinary combat ability
+                    and a ruthless personality.
+
+                </p>
+
+
+                <div class="character-tags">
+
+                    <span class="character-tag">
+                        Anime
+                    </span>
+
+                    <span class="character-tag">
+                        Jujutsu Kaisen
+                    </span>
+
+                    <span class="character-tag">
+                        Curse
+                    </span>
+
+                    <span class="character-tag">
+                        King of Curses
+                    </span>
+
+                </div>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#details"
+                        class="btn-purple"
+                    >
+                        <i class="fa-solid fa-circle-info"></i>
+                        View Details
+                    </a>
+
+                    <a
+                        href="Character.html"
+                        class="btn-outline-purple"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back to Characters
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <div class="character-image-box">
+
+                    <img
+                        src="asset/img/chr5.jpg"
+                        alt="Ryomen Sukuna"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DETAILS
+========================= -->
+
+<section
+    class="character-content"
+    id="details"
+>
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <h2 class="section-title">
+                Character <span>Profile</span>
+            </h2>
+
+            <p class="section-subtitle">
+                Everything you need to know about Ryomen Sukuna.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- Basic Information -->
+
+            <div class="col-lg-5">
+
+                <div class="info-card">
+
+                    <h3>
+                        <i class="fa-solid fa-id-card"></i>
+                        Basic Information
+                    </h3>
+
+
+                    <div class="info-row">
+                        <span>Name</span>
+                        <span>Ryomen Sukuna</span>
+                    </div>
+
+
+                    <div class="info-row">
+                        <span>Series</span>
+                        <span>Jujutsu Kaisen</span>
+                    </div>
+
+
+                    <div class="info-row">
+                        <span>Occupation</span>
+                        <span>Cursed Spirit</span>
+                    </div>
+
+
+                    <div class="info-row">
+                        <span>Title</span>
+                        <span>King of Curses</span>
+                    </div>
+
+
+                    <div class="info-row">
+                        <span>Affiliation</span>
+                        <span>Independent</span>
+                    </div>
+
+
+                    <div class="info-row">
+                        <span>Known As</span>
+                        <span>Ryomen Sukuna</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- About -->
+
+            <div class="col-lg-7">
+
+                <div class="about-card">
+
+                    <h3 class="section-title">
+                        About <span>Sukuna</span>
+                    </h3>
+
+                    <p>
+
+                        Ryomen Sukuna is a legendary figure in
+                        the world of Jujutsu Kaisen and is known
+                        as the King of Curses. His immense cursed
+                        energy and supernatural abilities make him
+                        one of the most dangerous characters in
+                        the series.
+
+                    </p>
+
+                    <p>
+
+                        Sukuna has a confident, arrogant and
+                        ruthless personality. He possesses
+                        tremendous physical strength and advanced
+                        knowledge of jujutsu techniques.
+
+                    </p>
+
+                    <p>
+
+                        His presence represents one of the greatest
+                        threats faced by the characters throughout
+                        the Jujutsu Kaisen story.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABILITIES
+========================= -->
+
+<section class="character-content pt-0">
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <h2 class="section-title">
+                Skills & <span>Abilities</span>
+            </h2>
+
+            <p class="section-subtitle">
+                Sukuna's most notable abilities.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="ability-card">
+
+                    <div class="ability-icon">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+
+                    <h4>
+                        Cursed Energy
+                    </h4>
+
+                    <p>
+                        Sukuna possesses an enormous amount of
+                        cursed energy, allowing him to perform
+                        extremely powerful techniques.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="ability-card">
+
+                    <div class="ability-icon">
+                        <i class="fa-solid fa-crosshairs"></i>
+                    </div>
+
+                    <h4>
+                        Cursed Techniques
+                    </h4>
+
+                    <p>
+                        Sukuna is highly skilled in cursed
+                        techniques and can use devastating
+                        attacks with remarkable precision.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="ability-card">
+
+                    <div class="ability-icon">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+
+                    <h4>
+                        Domain Expansion
+                    </h4>
+
+                    <p>
+                        His Domain Expansion is one of his most
+                        powerful abilities and demonstrates his
+                        extraordinary mastery of jujutsu.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats-section">
+
+    <div class="container">
+
+        <div class="row g-3">
+
+            <div class="col-6 col-md-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-number">
+                        S+
+                    </div>
+
+                    <div class="stat-name">
+                        Cursed Energy
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-number">
+                        S+
+                    </div>
+
+                    <div class="stat-name">
+                        Strength
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-number">
+                        S
+                    </div>
+
+                    <div class="stat-name">
+                        Technique
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-number">
+                        S+
+                    </div>
+
+                    <div class="stat-name">
+                        Combat
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     QUOTE
+========================= -->
+
+<section class="quote-section">
+
+    <div class="container">
+
+        <div class="quote-box">
+
+            <div class="quote-icon">
+                <i class="fa-solid fa-quote-left"></i>
+            </div>
+
+            <p>
+                "Know your place."
+            </p>
+
+            <small>
+                — Ryomen Sukuna
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <div class="footer-logo">
+                    Fandom<span>Verse</span>
+                </div>
+
+                <p>
+                    Explore, discover and connect with fandoms
+                    across anime, gaming, movies, TV, comics
+                    and manga.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="Anime.html">Anime</a>
+
+                <a href="Gaming.html">Gaming</a>
+
+                <a href="Movie.html">Movies</a>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Community
+                </h4>
+
+                <a href="Character.html">
+                    Characters
+                </a>
+
+                <a href="chat.html">
+                    Chat
+                </a>
+
+                <a href="#">
+                    Bookmarks
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Company
+                </h4>
+
+                <a href="AboutUs.html">
+                    About Us
+                </a>
+
+                <a href="Contactus.html">
+                    Contact Us
+                </a>
+
+                <a href="loginpage.html">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 FandomVerse. All rights reserved.
+            </span>
+
+            <span>
+                Made for fandom lovers.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>

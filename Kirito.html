@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kirito | FandomVerse</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#08091a;
+    color:#ffffff;
+}
+
+a{
+    text-decoration:none;
+}
+
+.main-navbar{
+    background:rgba(8,9,26,.97);
+    border-bottom:1px solid #29234b;
+    min-height:75px;
+}
+
+.navbar-brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.brand-logo{
+    width:55px;
+    height:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.brand-logo i{
+    font-size:30px;
+    color:#a855f7;
+}
+
+.brand-text span{
+    display:block;
+    font-size:20px;
+    font-weight:800;
+    color:white;
+}
+
+.brand-text span span{
+    color:#a855f7;
+}
+
+.brand-text small{
+    color:#8d8ba7;
+    font-size:10px;
+}
+
+.navbar-nav{
+    gap:4px;
+}
+
+.nav-link{
+    color:#b9b6d0 !important;
+    font-size:14px;
+    font-weight:600;
+    padding:9px 12px !important;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    color:white !important;
+    background:#201a3b;
+    border-radius:8px;
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.nav-icon{
+    width:40px;
+    height:40px;
+    border:1px solid #39305d;
+    border-radius:10px;
+    background:#121127;
+    color:#c084fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.nav-icon:hover{
+    background:#7c3aed;
+    color:white;
+}
+
+.login-btn{
+    background:linear-gradient(135deg,#7c3aed,#9333ea);
+    color:white;
+    padding:9px 20px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.login-btn:hover{
+    color:white;
+    box-shadow:0 0 20px rgba(168,85,247,.4);
+}
+
+.navbar-toggler{
+    color:white;
+    border:1px solid #493b70;
+}
+
+.navbar-toggler i{
+    color:white;
+}
+
+.character-page{
+    min-height:100vh;
+}
+
+.character-hero{
+    position:relative;
+    min-height:560px;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        90deg,
+        #08091a 5%,
+        rgba(8,9,26,.92) 35%,
+        rgba(8,9,26,.55) 65%,
+        #08091a 100%
+    );
+}
+
+.hero-bg{
+    position:absolute;
+    right:0;
+    top:0;
+    width:65%;
+    height:100%;
+    object-fit:cover;
+    opacity:.32;
+    z-index:0;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        #08091a 5%,
+        rgba(8,9,26,.8) 35%,
+        transparent 75%
+    );
+
+    z-index:1;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    padding:90px 0;
+}
+
+.breadcrumb-custom{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#77738f;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.breadcrumb-custom a{
+    color:#a855f7;
+}
+
+.breadcrumb-custom i{
+    font-size:9px;
+}
+
+.character-label{
+    display:inline-block;
+    color:#c084fc;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.character-title{
+    font-size:58px;
+    line-height:1.05;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.character-title span{
+    color:#a855f7;
+}
+
+.character-subtitle{
+    font-size:18px;
+    color:#aaa6bd;
+    margin-bottom:25px;
+}
+
+.character-description{
+    max-width:620px;
+    color:#9290a8;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.character-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:25px;
+}
+
+.character-tag{
+    background:#17132d;
+    border:1px solid #352b58;
+    color:#c9c3df;
+    padding:7px 14px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:30px;
+}
+
+.btn-purple{
+    background:linear-gradient(135deg,#7c3aed,#9333ea);
+    border:none;
+    color:white;
+    padding:12px 22px;
+    border-radius:9px;
+    font-weight:600;
+    font-size:14px;
+}
+
+.btn-purple:hover{
+    color:white;
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px rgba(124,58,237,.3);
+}
+
+.btn-outline-purple{
+    background:transparent;
+    border:1px solid #493b70;
+    color:#c084fc;
+    padding:12px 22px;
+    border-radius:9px;
+    font-weight:600;
+    font-size:14px;
+}
+
+.btn-outline-purple:hover{
+    background:#201a3b;
+    color:white;
+}
+
+.character-image-box{
+    position:absolute;
+    right:7%;
+    bottom:0;
+    z-index:2;
+    width:390px;
+    height:500px;
+
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+}
+
+.character-image-box img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+    filter:drop-shadow(0 20px 35px rgba(0,0,0,.7));
+}
+
+.character-content{
+    padding:70px 0;
+    background:#08091a;
+}
+
+.section-title{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.section-title span{
+    color:#a855f7;
+}
+
+.section-subtitle{
+    color:#77738f;
+    font-size:13px;
+    margin-bottom:30px;
+}
+
+.info-card{
+    background:#111126;
+    border:1px solid #28234a;
+    border-radius:16px;
+    padding:28px;
+    height:100%;
+}
+
+.info-card:hover{
+    border-color:#6336a4;
+}
+
+.info-card h3{
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.info-card h3 i{
+    color:#a855f7;
+    margin-right:8px;
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:13px 0;
+    border-bottom:1px solid #25213f;
+    font-size:13px;
+}
+
+.info-row:last-child{
+    border-bottom:none;
+}
+
+.info-row span:first-child{
+    color:#77738f;
+}
+
+.info-row span:last-child{
+    color:#ddd9ea;
+    font-weight:500;
+}
+
+.about-card{
+    background:linear-gradient(
+        145deg,
+        #15132d,
+        #0f1022
+    );
+
+    border:1px solid #29234b;
+    border-radius:16px;
+    padding:30px;
+}
+
+.about-card p{
+    color:#9290a8;
+    font-size:14px;
+    line-height:1.9;
+}
+
+.ability-card{
+    background:#111126;
+    border:1px solid #29234b;
+    border-radius:15px;
+    padding:25px;
+    height:100%;
+    transition:.3s;
+}
+
+.ability-card:hover{
+    transform:translateY(-5px);
+    border-color:#7c3aed;
+}
+
+.ability-icon{
+    width:50px;
+    height:50px;
+    border-radius:12px;
+    background:#21173c;
+    color:#c084fc;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:20px;
+    margin-bottom:18px;
+}
+
+.ability-card h4{
+    font-size:16px;
+    margin-bottom:10px;
+}
+
+.ability-card p{
+    color:#85829a;
+    font-size:12px;
+    line-height:1.7;
+}
+
+.stats-section{
+    padding:60px 0;
+}
+
+.stat-card{
+    background:#111126;
+    border:1px solid #29234b;
+    border-radius:15px;
+    text-align:center;
+    padding:25px 15px;
+}
+
+.stat-number{
+    font-size:30px;
+    font-weight:800;
+    color:#a855f7;
+}
+
+.stat-name{
+    color:#85829a;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.quote-section{
+    padding:20px 0 70px;
+}
+
+.quote-box{
+    background:
+    linear-gradient(
+        135deg,
+        #17132f,
+        #0f1022
+    );
+
+    border:1px solid #302653;
+    border-radius:18px;
+    padding:45px;
+    text-align:center;
+}
+
+.quote-icon{
+    color:#a855f7;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.quote-box p{
+    color:#d2cde1;
+    font-size:20px;
+    font-weight:500;
+    line-height:1.7;
+}
+
+.quote-box small{
+    color:#77738f;
+}
+
+footer{
+    background:#060713;
+    border-top:1px solid #29234b;
+    padding:50px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-logo{
+    font-size:22px;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.footer-logo span{
+    color:#a855f7;
+}
+
+.footer-grid p{
+    color:#77738f;
+    font-size:12px;
+    line-height:1.8;
+}
+
+.footer-grid h4{
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.footer-grid a{
+    display:block;
+    color:#77738f;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.footer-grid a:hover{
+    color:#c084fc;
+}
+
+.footer-bottom{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid #201d38;
+
+    display:flex;
+    justify-content:space-between;
+
+    color:#5f5c72;
+    font-size:11px;
+}
+
+@media(max-width:1199px){
+
+    .character-image-box{
+        right:2%;
+        width:340px;
+    }
+
+    .character-title{
+        font-size:48px;
+    }
+
+}
+
+@media(max-width:991px){
+
+    .character-hero{
+        min-height:auto;
+    }
+
+    .hero-bg{
+        width:100%;
+        opacity:.18;
+    }
+
+    .character-image-box{
+        position:relative;
+        right:auto;
+        width:300px;
+        height:380px;
+        margin:20px auto 0;
+    }
+
+    .hero-content{
+        padding:55px 0 20px;
+    }
+
+    .character-title{
+        font-size:42px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .character-title{
+        font-size:34px;
+    }
+
+    .character-subtitle{
+        font-size:15px;
+    }
+
+    .character-description{
+        font-size:13px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons a{
+        text-align:center;
+    }
+
+    .character-image-box{
+        width:250px;
+        height:320px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .quote-box{
+        padding:30px 20px;
+    }
+
+    .quote-box p{
+        font-size:16px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg main-navbar">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-crown"></i>
+            </div>
+
+            <div class="brand-text">
+                <span>Fandom<span>Verse</span></span>
+                <small>Portal for Fandom World</small>
+            </div>
+
+        </a>
+
+        <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="Anime.html">Anime</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Gaming.html">Gaming</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Movie.html">Movies</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Tvshow.html">TV Shows</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Manga.html">Manga</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Comic.html">Comics</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Character.html">Characters</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Contactus.html">Contact</a>
+                </li>
+
+            </ul>
+
+            <div class="nav-actions">
+
+                <a href="search.html" class="nav-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <a href="loginpage.html" class="login-btn">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+<!-- Navbar End -->
+
+
+<div class="character-page">
+
+<!-- Hero Start -->
+<section class="character-hero">
+
+    <img src="asset/img/chr24.png"
+         class="hero-bg"
+         alt="Kirito">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <div class="row">
+
+            <div class="col-lg-7">
+
+                <div class="breadcrumb-custom">
+
+                    <a href="index.html">Home</a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <a href="Character.html">Characters</a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <span>Kirito</span>
+
+                </div>
+
+                <span class="character-label">
+                    SWORD ART ONLINE
+                </span>
+
+                <h1 class="character-title">
+                    Kirito <span>Kirigaya</span>
+                </h1>
+
+                <p class="character-subtitle">
+                    The Black Swordsman
+                </p>
+
+                <p class="character-description">
+                    Kirito is the central protagonist of Sword Art Online,
+                    known for his exceptional swordsmanship, determination,
+                    and ability to overcome dangerous challenges in virtual
+                    worlds. His journey takes him through multiple virtual
+                    realities where he fights to protect his friends and
+                    those important to him.
+                </p>
+
+                <div class="character-tags">
+
+                    <span class="character-tag">Anime</span>
+                    <span class="character-tag">Sword Art Online</span>
+                    <span class="character-tag">Swordsman</span>
+                    <span class="character-tag">Beater</span>
+
+                </div>
+
+                <div class="hero-buttons">
+
+                    <a href="#profile" class="btn-purple">
+                        <i class="fa-solid fa-user"></i>
+                        View Details
+                    </a>
+
+                    <a href="Character.html"
+                       class="btn-outline-purple">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back to Characters
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <div class="character-image-box">
+
+                    <img src="asset/img/chr24.png"
+                         alt="Kirito">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Hero End -->
+
+
+<!-- Character Content Start -->
+<section class="character-content" id="profile">
+
+<div class="container">
+
+    <div class="text-center">
+
+        <h2 class="section-title">
+            Character <span>Profile</span>
+        </h2>
+
+        <p class="section-subtitle">
+            Everything you need to know about Kirito.
+        </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+        <!-- Basic Information -->
+        <div class="col-lg-5">
+
+            <div class="info-card">
+
+                <h3>
+                    <i class="fa-solid fa-circle-info"></i>
+                    Basic Information
+                </h3>
+
+                <div class="info-row">
+                    <span>Name</span>
+                    <span>Kirigaya Kazuto</span>
+                </div>
+
+                <div class="info-row">
+                    <span>Series</span>
+                    <span>Sword Art Online</span>
+                </div>
+
+                <div class="info-row">
+                    <span>Occupation</span>
+                    <span>Player / Swordsman</span>
+                </div>
+
+                <div class="info-row">
+                    <span>Alias</span>
+                    <span>Kirito / Black Swordsman</span>
+                </div>
+
+                <div class="info-row">
+                    <span>Ability</span>
+                    <span>Dual Blades</span>
+                </div>
+
+                <div class="info-row">
+                    <span>Gender</span>
+                    <span>Male</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- About -->
+        <div class="col-lg-7">
+
+            <div class="about-card">
+
+                <h3 class="mb-4">
+                    About Kirito
+                </h3>
+
+                <p>
+                    Kirito is the main protagonist of Sword Art Online.
+                    He becomes trapped inside the virtual MMORPG Sword Art
+                    Online and must survive its dangerous challenges while
+                    searching for a way to return to the real world.
+                </p>
+
+                <p>
+                    As a skilled player, Kirito develops a reputation for
+                    his remarkable swordsmanship and fast reactions. His
+                    experience as a solo player allows him to adapt quickly
+                    to difficult battles and unfamiliar situations.
+                </p>
+
+                <p>
+                    Throughout his adventures, Kirito forms strong bonds
+                    with other players and repeatedly places himself in
+                    danger to protect them. His determination and loyalty
+                    remain central parts of his character.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Abilities -->
+    <div class="text-center mt-5 pt-4">
+
+        <h2 class="section-title">
+            Skills & <span>Abilities</span>
+        </h2>
+
+        <p class="section-subtitle">
+            The abilities that make Kirito a formidable swordsman.
+        </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+        <div class="col-lg-4">
+
+            <div class="ability-card">
+
+                <div class="ability-icon">
+                    <i class="fa-solid fa-khanda"></i>
+                </div>
+
+                <h4>
+                    Dual Blades
+                </h4>
+
+                <p>
+                    Kirito is highly skilled with dual-wielding swords,
+                    allowing him to perform rapid and powerful combinations
+                    during intense battles.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-4">
+
+            <div class="ability-card">
+
+                <div class="ability-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h4>
+                    Lightning Speed
+                </h4>
+
+                <p>
+                    His fast reactions and precise movements allow him to
+                    respond quickly to enemy attacks and create openings
+                    during combat.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-4">
+
+            <div class="ability-card">
+
+                <div class="ability-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h4>
+                    Battle Adaptation
+                </h4>
+
+                <p>
+                    Kirito can quickly understand new combat situations,
+                    adapt his strategy, and use his experience to overcome
+                    difficult opponents.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Stats -->
+    <div class="stats-section">
+
+        <div class="text-center">
+
+            <h2 class="section-title">
+                Character <span>Stats</span>
+            </h2>
+
+            <p class="section-subtitle">
+                A quick overview of Kirito's combat abilities.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="stat-card">
+
+                    <div class="stat-number">
+                        S+
+                    </div>
+
+                    <div class="stat-name">
+                        Swordsmanship
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="stat-card">
+
+                    <div class="stat-number">
+                        S
+                    </div>
+
+                    <div class="stat-name">
+                        Speed
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="stat-card">
+
+                    <div class="stat-number">
+                        S+
+                    </div>
+
+                    <div class="stat-name">
+                        Reflexes
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="stat-card">
+
+                    <div class="stat-number">
+                        A+
+                    </div>
+
+                    <div class="stat-name">
+                        Endurance
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Quote -->
+    <div class="quote-section">
+
+        <div class="quote-box">
+
+            <div class="quote-icon">
+                <i class="fa-solid fa-quote-left"></i>
+            </div>
+
+            <p>
+                "Keep moving forward, no matter how difficult the path becomes."
+            </p>
+
+            <small>
+                — Kirito
+            </small>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+<!-- Character Content End -->
+
+
+<!-- Footer Start -->
+<footer>
+
+<div class="container">
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="footer-logo">
+                Fandom<span>Verse</span>
+            </div>
+
+            <p>
+                Your portal to the world of anime, gaming, movies,
+                TV shows, manga, comics, and unforgettable characters.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Explore</h4>
+
+            <a href="Anime.html">Anime</a>
+            <a href="Gaming.html">Gaming</a>
+            <a href="Movie.html">Movies</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Community</h4>
+
+            <a href="Character.html">Characters</a>
+            <a href="chat.html">Chat</a>
+            <a href="#">Community</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Company</h4>
+
+            <a href="AboutUs.html">About Us</a>
+            <a href="Contactus.html">Contact</a>
+            <a href="loginpage.html">Login</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 FandomVerse. All rights reserved.
+        </span>
+
+        <span>
+            Made for fandom lovers.
+        </span>
+
+    </div>
+
+</div>
+
+</footer>
+<!-- Footer End -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
